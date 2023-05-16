@@ -24,7 +24,7 @@ fi
   echo -e  ""
   echo -e  "  \e[31m 1\e[33m  =>\033[0m Tunnel"
   echo -e  "  \e[31m 2\e[33m  =>\033[0m Cancel Tunnel"
-  echo -e  "  \e[31m 3\e[33m  =>\033[0m Exit"
+  echo -e  "  \e[31m 0\e[33m  =>\033[0m Exit"
   echo -e  " "
   read -p  " » Please Select Number: " choice
   echo " "
