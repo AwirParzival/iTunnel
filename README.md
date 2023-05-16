@@ -8,7 +8,7 @@ IP forwarding by iptables
 <br>
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/AwirParzival/iTunnel/main/itunnel.sh)
+wget https://raw.githubusercontent.com/AwirParzival/iTunnel/main/itunnel.sh && bash itunnel.sh
 ```
 
 ##
