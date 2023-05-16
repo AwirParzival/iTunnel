@@ -5,7 +5,6 @@ IP forwarding by iptables
 - Tunnel & Cancel Tunnel
 - Forward the desired port
 - Forward as tcp
-- 
 
 ```
 bash <(curl -s https://raw.githubusercontent.com/AwirParzival/iTunnel/main/itunnel.sh)
