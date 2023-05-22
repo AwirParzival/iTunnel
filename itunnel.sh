@@ -24,6 +24,7 @@ fi
   echo -e  ""
   echo -e  "  \e[31m 1\e[33m  =>\033[0m Tunnel"
   echo -e  "  \e[31m 2\e[33m  =>\033[0m Cancel Tunnel"
+  echo -e  "  \e[31m 3\e[33m  =>\033[0m Show IP Tunnel"
   echo -e  "  \e[31m 0\e[33m  =>\033[0m Exit"
   echo -e  " "
   read -p  " » Please Select Number: " choice
@@ -62,6 +63,7 @@ if [ "$choice" = "1" ] ; then
 	echo -e " "
 	
 	rm -rf /etc/rc.local
+	echo " # Tunnel IP: ${ip}" >> /etc/rc.local
 	echo "#!/bin/sh -e" >> /etc/rc.local
 	echo "iptables -t nat -A PREROUTING -p tcp --dport ${port} -j DNAT --to-destination ${ip}" >> /etc/rc.local
 	echo "iptables -t nat -A POSTROUTING -j MASQUERADE" >> /etc/rc.local
@@ -85,6 +87,15 @@ elif [ "$choice" = "2" ]; then
 	echo -e  "\e[31m               ─────────────────────────────────\033[0m"
 	echo -e  "\n\e[92m                Your tunnel has been cancelled!\033[0m\n"
 	echo -e  "\e[31m               ─────────────────────────────────\033[0m"
+
+# Show IP Tunnel
+elif [ "$choice" = "3" ]; then
+	
+	echo -e  " "
+	
+	head -n 1 /etc/rc.local
+	
+	echo -e  " "
 	
 # Exit
 elif [ "$choice" = "0" ]; then
